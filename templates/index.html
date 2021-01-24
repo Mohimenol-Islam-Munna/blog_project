@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Home page for blog app</h1>
+    {% for post in all_blog_posts %}
+        <h1>{{ post.title }}</h1>
+        <h4>Author Name :{{ post.author }}</h4>
+        <p>{{ post.body }}</p>
+    {% endfor %}
+{% endblock content %}
