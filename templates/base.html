@@ -9,14 +9,16 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
 <body>
-    <header>
+    <header class="container header">
         <a href="{% url 'home' %}">Django Blog</a>
     </header>
 
-    <div>
-        {% block content %}
+    <div class="container">
+        <div>
+            {% block content %}
 
-        {% endblock content %}
+            {% endblock content %}
+        </div>
     </div>
 </body>
 </html>

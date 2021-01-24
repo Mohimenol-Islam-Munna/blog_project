@@ -1,10 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Home page for blog app</h1>
     {% for post in all_blog_posts %}
-        <h1>{{ post.title }}</h1>
-        <h4>Author Name :{{ post.author }}</h4>
-        <p>{{ post.body }}</p>
+        <div class="content">
+            <h1><a style="text-decoration: none;" href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h1>
+            <h4>Author Name :{{ post.author }}</h4>
+            <p>{{ post.body }}</p>
+            <div style="width: 100px; background-color: rgb(62, 170, 12); margin-left: auto; text-align: center; padding: 14px 5px;">
+                <a style="text-decoration: none; color: white;" href="{% url 'post_detail' post.pk %}">Read More</a>
+            </div>
+        </div>
     {% endfor %}
 {% endblock content %}

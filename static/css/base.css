@@ -2,6 +2,41 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    color: salmon;
 }
 
+.container{
+    width: 75%;
+    margin: auto;
+}
+
+/*================= 
+    header section 
+===================*/
+header{
+    padding: 30px 0px;
+    border-bottom: 2px solid gray;
+}
+
+.header > a{
+
+    text-decoration: none;
+    font-size: 30px;
+}
+
+
+/*================= 
+    content section 
+===================*/
+.content {
+    background-color: lightgray;
+    margin: 40px 0px;
+    padding: 20px;
+}
+
+.content p{
+    margin: 10px 0px;
+}
+
+.content h1{
+   color: blueviolet;
+}
