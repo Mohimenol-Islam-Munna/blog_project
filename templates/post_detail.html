@@ -5,8 +5,13 @@
         <h1>{{ blog.title }}</h1>
         <h4>Author Name : {{ object.author }}</h4>
         <p>{{ blog.body }}</p>
-        <div style="width: 100px; background-color: rgb(62, 170, 12); margin-left: auto; text-align: center; padding: 14px 5px;">
-            <a style="text-decoration: none; color: white;" href="{% url 'home' %}">Back</a>
+        <div style="width: 100%; display: flex; justify-content: space-between; padding: 14px 5px;">
+            <div>
+                <a style="text-decoration: none; color: white; background-color: blueviolet; padding: 12px 10px;" href="{% url 'home' %}">Back</a>
+            </div>
+            <div>
+                <a style="text-decoration: none; color: white; background-color: red; padding: 12px 10px;" href="{% url 'delete_post' blog.pk %}">Delete</a>
+            </div>
         </div>
     </div>
 {% endblock content %}

@@ -7,7 +7,9 @@
             <h4>Author Name :{{ post.author }}</h4>
             <p>{{ post.body }}</p>
             <div style="width: 100%; display: flex; justify-content: space-between; padding: 14px 5px;">
-                <a style="text-decoration: none; color: white; background-color: red; padding: 12px 10px" href="{% url 'edit_post' post.pk %}">Edit Post</a>
+
+                <a style="text-decoration: none; color: white; background-color: yellowgreen; padding: 12px 10px" href="{% url 'edit_post' post.pk %}">Edit Post</a>
+                
                 <a style="text-decoration: none; color: white; background-color: blueviolet; padding: 12px 10px" href="{% url 'post_detail' post.pk %}">Read More</a>
             </div>
         </div>

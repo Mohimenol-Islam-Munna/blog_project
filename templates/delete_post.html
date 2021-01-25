@@ -3,17 +3,17 @@
 
 {% block content %}
     <div style="margin-top: 20px; color: blueviolet;">
-        <h1>Edit Post</h1>
+        <h1>Delete Post</h1>
     </div>
     <div style="margin-top: 20px;">
         <form action="" method="post">
             {% csrf_token %}
 
             <div>
-                {{ form.as_p }}
+                <h1>are u want to delete "{{ blog.title}}" post?</h1>
             </div>
             <div style="padding-top: 20px;"> 
-                <input type="submit" value="Update">
+                <input type="submit" value="Confirm">
             </div>
         </form>
     </div>
