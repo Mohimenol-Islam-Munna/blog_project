@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.views.generic import ListView, DetailView
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView
 from .models import Blog
 
 
@@ -24,5 +24,14 @@ class CreateBlogView(CreateView):
     model = Blog
 
     template_name = 'create_post.html'
+
+    fields = ['title', 'author', 'body']
+
+
+class EditBlogView(UpdateView):
+
+    model = Blog
+
+    template_name = 'edit_post.html'
 
     fields = ['title', 'author', 'body']
