@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="margin: 40px 0px; border: 2px solid sandybrown; padding: 20px;">
+    <h2>Log In</h2>
+    <form method="post" style="margin-top: 20px">
+        {% csrf_token %}
+
+        <div><span>Username: </span> {{ form.username }}</div><br>
+        <div><span>Password: </span> {{ form.password }}</div><br>
+        <button type="submit" style="padding: 10px 20px; background-color: blueviolet; color: white; font-size: 18px;">Log In</button>
+    </form>
+</div>
+{% endblock content %}
